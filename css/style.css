@@ -5,10 +5,13 @@
   --border-clr: #cfcac6;
   --gray-clr1: #eeecec;
   --gray-clr2: #b6afa9;
+  --gray-clr3: #dad6cb;
+  --gray-clr4: #e0dcc9;
   --selection-clr: #dba363;
   --shadow-clr1: #32325d40;
   --shadow-clr2: #0000004d;
   --shadow-clr3: #0a254059;
+  --svg-clr: #e5b87f;
   --font-family: "Nunito Sans", sans-serif;
 }
 
@@ -32,6 +35,27 @@ body {
   min-height: 100vh;
   padding: 5rem 20rem;
   background-color: var(--primary-clr);
+}
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 0.3rem);
+  height: 15rem;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: var(--svg-clr);
 }
 
 .img {
@@ -71,6 +95,10 @@ body {
 }
 
 #btn:hover {
+  background-image: linear-gradient(45deg, var(--gray-clr4), var(--gray-clr3));
+}
+
+#btn:active {
   transform: scale(0.98);
 }
 
@@ -97,5 +125,9 @@ body {
 
   body {
     padding: 5rem 5rem;
+  }
+
+  .custom-shape-divider-bottom {
+    display: none;
   }
 }
