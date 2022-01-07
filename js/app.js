@@ -1,3 +1,5 @@
+"use strict";
+
 const btn = document.getElementById("btn");
 const p = document.querySelector(".joke");
 const img = document.querySelector(".img");
