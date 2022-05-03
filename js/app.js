@@ -1,12 +1,9 @@
 "use strict";
 
-// background sound
 const sound = document.getElementById("sound");
-sound.play();
-
-const btn = document.getElementById("btn");
 const p = document.querySelector(".joke");
 const img = document.querySelector(".img");
+const btn = document.getElementById("btn");
 
 btn.addEventListener("click", getRandomJoke);
 
@@ -21,3 +18,6 @@ function getRandomJoke() {
       console.error("Error:", error);
     });
 }
+
+// background sound
+sound.play();
