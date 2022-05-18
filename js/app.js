@@ -12,7 +12,7 @@ function getRandomJoke() {
     .then((response) => response.json())
     .then((data) => {
       p.textContent = data.value;
-      img.src = data.icon_url;
+      // img.src = data.icon_url;
     })
     .catch((error) => {
       console.error("Error:", error);
